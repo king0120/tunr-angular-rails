@@ -1,6 +1,8 @@
 class ArtistController < ApplicationController
     def index
         @artist = Artist.all
+
+        render json: @artist
     end
     
     def create

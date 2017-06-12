@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="TunrApp">
   <head>
     <title>Tunr</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'app.bundle', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <ui-view></ui-view>
+    {{5+5}}
+    <ng-artist></ng-artist>
     <%= yield %>
   </body>
 </html>
