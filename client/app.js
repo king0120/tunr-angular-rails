@@ -15,6 +15,10 @@ function router($stateProvider, $urlRouterProvider) {
         url: '/artist/:id',
         template: '<tunr-artist></tunr-artist>'
     })
+    .state('newArtist', {
+        url: '/artist/new',
+        template: '<tunr-new-artist></tunr-new-artist>'
+    })
 
     $urlRouterProvider.otherwise('/');
 }

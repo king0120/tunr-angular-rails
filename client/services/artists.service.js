@@ -17,6 +17,13 @@ function artistService($http) {
         });
     }
 
+    service.saveArtist = function(newArtist){
+        return $http.post('/artist', newArtist).then(res => {
+            console.log('Save Successful');
+            return res.data
+        })
+    }
+
     return service;
 }
 
