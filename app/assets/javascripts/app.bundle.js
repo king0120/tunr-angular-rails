@@ -5185,7 +5185,15 @@ NewArtistController.$inject = ['$stateParams', '$http', 'artistService'];
 
 function NewArtistController($stateParams, $http, artistService) {
     var vm = this;
-    console.log('hello from controller'
+    vm.artist = {};
+    console.log('hello from controller');
+
+    vm.saveArtist = function () {
+        console.log('submit!');
+        artistService.saveArtist(vm.artist).then(function (res) {
+            console.log(res);
+        });
+    };
 
     // function activate(){
     //     getArtist($stateParams.id);
@@ -5197,7 +5205,6 @@ function NewArtistController($stateParams, $http, artistService) {
     //         vm.artist = data;
     //     })
     // }
-    );
 }
 
 exports.default = NewArtistController;
@@ -44706,7 +44713,7 @@ module.exports = "<h1>Artists</h1>\n<div class=\"btn btn-large\" ui-sref=\"newAr
 /* 100 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <h1>new artist</h1>\n    <form>\n        <div class=\"form-group\">\n            <label for=\"bandName\">Band Name</label>\n            <input type=\"text\" class=\"form-control\" id=\"bandName\" placeholder=\"Enter name\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"origin\">Origin</label>\n            <input type=\"text\" class=\"form-control\" id=\"origin\" placeholder=\"Enter origin\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"genre\">Genre</label>\n            <input type=\"text\" class=\"form-control\" id=\"genre\" placeholder=\"Enter genre\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"photoUrl\">Photo Url</label>\n            <input type=\"text\" class=\"form-control\" id=\"photoUrl\" placeholder=\"Enter photo\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"biography\">Biography</label>\n            <textarea class=\"form-control\" id=\"biography\" rows=\"3\"></textarea>\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n    </form>\n</div>\n\n<!--name origin photo_utl genre bio-->";
+module.exports = "<div class=\"container\">\n    <h1>new artist</h1>\n    <form ng-submit=\"$ctrl.saveArtist()\">\n        <div class=\"form-group\" >\n            <label for=\"bandName\">Artist Name</label>\n            <input ng-model=\"$ctrl.artist.name\" type=\"text\" class=\"form-control\" id=\"bandName\" placeholder=\"Enter name\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"origin\">Origin</label>\n            <input ng-model=\"$ctrl.artist.origin\" type=\"text\" class=\"form-control\" id=\"origin\" placeholder=\"Enter origin\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"genre\">Genre</label>\n            <input ng-model=\"$ctrl.artist.genre\" type=\"text\" class=\"form-control\" id=\"genre\" placeholder=\"Enter genre\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"photoUrl\">Photo Url</label>\n            <input ng-model=\"$ctrl.artist.photo_url\" type=\"text\" class=\"form-control\" id=\"photoUrl\" placeholder=\"Enter photo\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"biography\">Biography</label>\n            <textarea ng-model=\"$ctrl.artist.bio\" class=\"form-control\" id=\"biography\" rows=\"3\"></textarea>\n        </div>\n        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n    </form>\n</div>\n";
 
 /***/ }),
 /* 101 */

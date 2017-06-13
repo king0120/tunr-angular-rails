@@ -1,28 +1,26 @@
 <div class="container">
     <h1>new artist</h1>
-    <form>
-        <div class="form-group">
-            <label for="bandName">Band Name</label>
-            <input type="text" class="form-control" id="bandName" placeholder="Enter name">
+    <form ng-submit="$ctrl.saveArtist()">
+        <div class="form-group" >
+            <label for="bandName">Artist Name</label>
+            <input ng-model="$ctrl.artist.name" type="text" class="form-control" id="bandName" placeholder="Enter name">
         </div>
         <div class="form-group">
             <label for="origin">Origin</label>
-            <input type="text" class="form-control" id="origin" placeholder="Enter origin">
+            <input ng-model="$ctrl.artist.origin" type="text" class="form-control" id="origin" placeholder="Enter origin">
         </div>
         <div class="form-group">
             <label for="genre">Genre</label>
-            <input type="text" class="form-control" id="genre" placeholder="Enter genre">
+            <input ng-model="$ctrl.artist.genre" type="text" class="form-control" id="genre" placeholder="Enter genre">
         </div>
         <div class="form-group">
             <label for="photoUrl">Photo Url</label>
-            <input type="text" class="form-control" id="photoUrl" placeholder="Enter photo">
+            <input ng-model="$ctrl.artist.photo_url" type="text" class="form-control" id="photoUrl" placeholder="Enter photo">
         </div>
         <div class="form-group">
             <label for="biography">Biography</label>
-            <textarea class="form-control" id="biography" rows="3"></textarea>
+            <textarea ng-model="$ctrl.artist.bio" class="form-control" id="biography" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
-
-<!--name origin photo_utl genre bio-->
