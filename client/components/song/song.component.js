@@ -1,4 +1,4 @@
-import controller from 'song.controller';
+import controller from 'song.controller.js';
 import template from 'song.html';
 
 const songComponent = {controller, template};

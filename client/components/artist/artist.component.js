@@ -1,4 +1,4 @@
-import artistController from './artist.controlller';
+import artistController from './artist.controller';
 import artistTemplate from './artist.html';
 
 const artistComponent = {
@@ -6,4 +6,4 @@ const artistComponent = {
     template: artistTemplate
 }
 
-angular.module('TunrApp').component('ngArtist', artistComponent);
+angular.module('TunrApp').component('tunrArtist', artistComponent);
