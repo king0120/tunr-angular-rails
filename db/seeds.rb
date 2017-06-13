@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-(1..100).each do |name, origin, genre, photo_url|
+(1..20).each do |name, origin, genre, photo_url, bio|
     fake_city = "#{FFaker::Address.city}, #{FFaker::Address.country}"
-    Artist.create(name: FFaker::Music.artist, origin: fake_city, genre: FFaker::Music.genre,photo_url: FFaker::Avatar.image)
+    Artist.create(name: FFaker::Music.artist, origin: fake_city, genre: FFaker::Music.genre,photo_url: FFaker::Avatar.image, bio: FFaker::HipsterIpsum.paragraphs)
 end
