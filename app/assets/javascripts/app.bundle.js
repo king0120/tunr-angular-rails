@@ -76,9 +76,9 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-TestController.$inject = ['$http'];
+ArtistController.$inject = ['$http'];
 
-function TestController($http) {
+function ArtistController($http) {
     var vm = this;
 
     $http.get('/artist').then(function (res) {
@@ -87,7 +87,7 @@ function TestController($http) {
     });
 }
 
-exports.default = TestController;
+exports.default = ArtistController;
 
 /***/ }),
 /* 1 */
@@ -122,7 +122,6 @@ var artistComponent = {
     template: _artist4.default
 };
 
-console.log('hello');
 angular.module('TunrApp').component('ngArtist', artistComponent);
 
 /***/ }),
@@ -33514,7 +33513,7 @@ module.exports = angular;
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Artists</h1>\n<div class=\"flex\" ng-repeat=\"artist in $ctrl.artists\">\n    <img ng-src={{artist.photo_url}}></img>\n    <div class=\"info\">\n        <h4>{{artist.name}}</h4>\n        <div>{{artist.genre}}</div>\n        <div>{{artist.origin}}</div>\n    </div>\n</div>";
+module.exports = "<h1>Artists</h1>\n<div class=\"artist-container flex\">\n    <div class=\"artist flex\" ng-repeat=\"artist in $ctrl.artists\">\n        <img ng-src={{artist.photo_url}}></img>\n        <div class=\"info\">\n            <h4>{{artist.name}}</h4>\n            <div>{{artist.genre}}</div>\n            <div>{{artist.origin}}</div>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 /* 6 */

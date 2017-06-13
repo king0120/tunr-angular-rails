@@ -6,5 +6,4 @@ const artistComponent = {
     template: artistTemplate
 }
 
-console.log('hello')
 angular.module('TunrApp').component('ngArtist', artistComponent);

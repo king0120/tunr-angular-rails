@@ -1,6 +1,6 @@
-TestController.$inject = ['$http']
+ArtistController.$inject = ['$http']
 
-function TestController($http){
+function ArtistController($http){
     var vm = this;
 
     $http.get('/artist').then(res => {
@@ -9,4 +9,4 @@ function TestController($http){
     });
 }
 
-export default TestController;
+export default ArtistController;

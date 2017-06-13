@@ -1,11 +1,36 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootswatch/journal/variables";
+@import "bootswatch/slate/variables";
 @import "bootstrap";
-@import "bootswatch/journal/bootswatch";
+@import "bootswatch/slate/bootswatch";
 
+img{
+    height: 100px;
+    width: 100px;
+}
 
 .flex{
     display: flex;
+}
+
+.artist-container{
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.artist{
+    margin: 10px 0;
+    background: rgba(0,0,0,.3);
+    width: 40%;
+    border-radius: 15px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h4{
+        font-size: 3rem;
+    }   
 }
