@@ -44701,7 +44701,7 @@ $provide.value("$locale", {
 /* 98 */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>{{$ctrl.artist.name}}</h1>\n<img ng-src=\"{{$ctrl.artist.photo_url}}\" />\n<p>{{$ctrl.artist.bio}}</p>";
+module.exports = "<h1>{{$ctrl.artist.name}}</h1>\n<img ng-src=\"{{$ctrl.artist.photo_url}}\" />\n<p>{{$ctrl.artist.bio}}</p>\n\n";
 
 /***/ }),
 /* 99 */
